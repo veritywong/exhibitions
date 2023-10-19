@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @exhibition %>
+
+<div>
+  <%= link_to "Edit this exhibition", edit_exhibition_path(@exhibition) %> |
+  <%= link_to "Back to exhibitions", exhibitions_path %>
+
+  <%= button_to "Destroy this exhibition", @exhibition, method: :delete %>
+</div>

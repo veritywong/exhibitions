@@ -1,0 +1,37 @@
+<%
+=begin%>
+ <div id="<%= dom_id exhibition %>"> 
+<%
+=end%>
+<div class="box">
+<div class="exhibition">
+  <p>
+    <strong><%= exhibition.title %></strong>
+    
+  </p>
+
+  <p>
+    <strong>Start date:</strong>
+    <%= exhibition.start_date %>
+  </p>
+
+  <p>
+    <strong>End date:</strong>
+    <%= exhibition.end_date %>
+  </p>
+
+  <p>
+    <strong>Location:</strong>
+    <%= exhibition.location %>
+  </p>
+
+  <p>
+    <%= image_tag exhibition.image, alt: "Exhibition Image", class: "image"%>
+  </p>
+
+  <p>
+    <strong>Url:</strong>
+    <%= exhibition.url %>
+  </p>
+</div>
+</div>
