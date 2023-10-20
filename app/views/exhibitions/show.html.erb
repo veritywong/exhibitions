@@ -1,10 +1,24 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @exhibition %>
+<div class="show">
+  <%
+=begin%>
+ <%= render @exhibition %> 
+<%
+=end%>
+   <%= render(ExhibitionComponent.new(exhibition: @exhibition)) %>
+</div>
 
 <div>
   <%= link_to "Edit this exhibition", edit_exhibition_path(@exhibition) %> |
   <%= link_to "Back to exhibitions", exhibitions_path %>
 
+   <p>
+    <%= link_to "Visit Site", @exhibition.url, target: :_blank %>
+   </p>
+
   <%= button_to "Destroy this exhibition", @exhibition, method: :delete %>
+
+  <%= render(CommentComponent.new(body: "comment_1").with_content("hi there")) %>
 </div>
+

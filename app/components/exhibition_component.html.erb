@@ -1,0 +1,19 @@
+<div class="exhibition-item">
+
+  <h2>
+    <%= link_to @exhibition.title, exhibition_path(@exhibition) %>
+  </h2>
+  
+  <div class="exhibition-details">
+    <p>
+      <strong><%= @exhibition.location %></strong><br>
+      <%= @exhibition.start_date %> - <%= @exhibition.end_date %>
+    </p>
+
+  </div>
+
+  <span>
+    <%= link_to image_tag(@exhibition.image, alt: "Exhibition Image", class: "image center"), exhibition_path(@exhibition)%>
+  </span>
+
+</div>

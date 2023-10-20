@@ -14,30 +14,88 @@
  *= require_self
  */
 
-/* * {
-    border: solid red;
-    margin: 0;
+ html {
+    box-sizing: border-box;
+  }
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+  /* generic styles for the page */
+  body {
     padding: 0;
-} */
-.exhibition {
-    display: block;
-}
-
-body {
+    margin: 0;
     background-color: rgb(255, 254, 250);
+    /* font-family: var(--sans);
+    background-color: var(--black);
+    color: var(--white);
+    font-size: var(--font-size); */
+  }
+  h1,
+  h2,
+  h3 {
+    margin: 0;
+  }
+
+  .navbar {
+  border-top: solid blue 1px;
+  border-bottom: solid blue 1px;
+  }
+
+  .navbar .nav-item a {
+    color: darkred;
+    font-weight: bold;
+    border-right: solid blue 1px;
+  }
+
+  #title h1 {
+    text-align: center;
+    font-size: 3.5rem;
+    margin: 2.5rem, 0;
+  }
+
+#exhibitions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
 }
 
-.box {
+#exhibitions .exhibition-item {
+    margin: 2rem;
     border: solid blue;
-    width: 410px;
-    padding: 2rem;
-    display: inline-block;
+    max-width: 400px;
+    padding: 30px;
     border-radius: 5px;
-
 }
 
- .image {
-    width: 400px;
-    height: auto;
+.exhibition-item h2 a {
+    text-decoration: none;
+    color: darkred;
+}
 
+.exhibition-details {
+    margin-top: 1rem;
+}
+
+.image {
+    width: 340px;
+    height: auto;
+    margin: auto;
  }
+
+.show {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+ 
+
+.show .exhibition-item .image {
+    width: 800px;
+}
+
+.form-container {
+    margin: 2rem;
+}

@@ -1,37 +1,26 @@
-<%
+
+ <%
 =begin%>
- <div id="<%= dom_id exhibition %>"> 
+ <div id="<%= dom_id exhibition %>">   
 <%
 =end%>
-<div class="box">
-<div class="exhibition">
-  <p>
-    <strong><%= exhibition.title %></strong>
-    
-  </p>
 
-  <p>
-    <strong>Start date:</strong>
-    <%= exhibition.start_date %>
-  </p>
+<div class="exhibition-item">
 
-  <p>
-    <strong>End date:</strong>
-    <%= exhibition.end_date %>
-  </p>
+  <h2>
+    <%= link_to exhibition.title, exhibition_path(exhibition) %>
+  </h2>
+  
+  <div class="exhibition-details">
+    <p>
+      <strong><%= exhibition.location %></strong><br>
+      <%= exhibition.start_date %> - <%= exhibition.end_date %>
+    </p>
 
-  <p>
-    <strong>Location:</strong>
-    <%= exhibition.location %>
-  </p>
+  </div>
 
-  <p>
-    <%= image_tag exhibition.image, alt: "Exhibition Image", class: "image"%>
-  </p>
+  <span>
+    <%= link_to image_tag(exhibition.image, alt: "Exhibition Image", class: "image center"), exhibition_path(exhibition)%>
+  </span>
 
-  <p>
-    <strong>Url:</strong>
-    <%= exhibition.url %>
-  </p>
-</div>
 </div>
